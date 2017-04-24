@@ -6,12 +6,12 @@ class Sort {
 
   public:
     // Constructor
-    Sort();
+    Sort() = default;
     // Destructor
-    virtual ~Sort();
+    virtual ~Sort() {};
 
     // Methods
-    virtual void sortArray(int length);
+    virtual int* sortArray(int numArray[], int arrayLength) = 0;
 
 };
 #endif
