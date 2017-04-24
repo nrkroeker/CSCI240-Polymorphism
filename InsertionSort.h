@@ -2,6 +2,7 @@
 
 #ifndef INSERTIONSORT_H
 #define INSERTIONSORT_H
+#include "Sort.h"
 
 class InsertionSort : public Sort {
 
@@ -9,6 +10,8 @@ class InsertionSort : public Sort {
 
     InsertionSort();
     ~InsertionSort();
+
+    virtual int* sortArray(int numArray[], int arrayLength);
 
 };
 #endif
