@@ -60,16 +60,16 @@ std::string sortInput;
     std::cin >> menuInput;
 
     if(menuInput == "1") {
-      loadFile(numArray);
-
-      std::cout << "\nNumber array loaded from file\n" << std::endl;
-
-      std::cout << "Unsorted Array: " << std::flush;
-      printArray(numArray);
 
       sortLoop = true;
 
       while(sortLoop) {
+        loadFile(numArray);
+
+        std::cout << "\nNumber array loaded from file\n" << std::endl;
+
+        std::cout << "Unsorted Array: " << std::flush;
+        printArray(numArray);
         std::cout << "1. Insertion Sort \n2. Bubble Sort \n3. Exit Program \nPlease select an option > " << std::flush;
         std::cin >> sortInput;
 
@@ -78,7 +78,7 @@ std::string sortInput;
           std::cout << "\nInsertion Sort: " << std::flush;
           InsertionSort * insert = new InsertionSort();
 
-          insert->sortArray(numArray, 50);
+          insert->sortArray(numArray, 51);
           printArray(numArray);
 
           sortLoop = false;
