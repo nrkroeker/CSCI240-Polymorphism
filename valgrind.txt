@@ -1,0 +1,23 @@
+==72463== Memcheck, a memory error detector
+==72463== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==72463== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==72463== Command: make
+==72463==
+g++ -g -c BubbleSort.cpp
+g++ -g -c Driver.cpp
+g++ Sort.o InsertionSort.o BubbleSort.o Driver.o -o driver
+==72463==
+==72463== HEAP SUMMARY:
+==72463==     in use at exit: 144,535 bytes in 1,185 blocks
+==72463==   total heap usage: 1,716 allocs, 531 frees, 299,393 bytes allocated
+==72463==
+==72463== LEAK SUMMARY:
+==72463==    definitely lost: 0 bytes in 0 blocks
+==72463==    indirectly lost: 0 bytes in 0 blocks
+==72463==      possibly lost: 0 bytes in 0 blocks
+==72463==    still reachable: 144,535 bytes in 1,185 blocks
+==72463==         suppressed: 0 bytes in 0 blocks
+==72463== Rerun with --leak-check=full to see details of leaked memory
+==72463==
+==72463== For counts of detected and suppressed errors, rerun with: -v
+==72463== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
