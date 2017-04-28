@@ -8,11 +8,10 @@
 #include <string>
 #include <stdlib.h>
 
-int numArray[50];
 
-void printArray(int sortedArray[]) {
+void printArray(int* array) {
   for (int i = 0; i < 50; i++) {
-    std::cout << sortedArray[i] << std::flush;
+    std::cout << array[i] << std::flush;
     if (i != 49) {
       std::cout << ", " << std::flush;
     } else {
@@ -21,13 +20,13 @@ void printArray(int sortedArray[]) {
   }
 }
 
-void loadFile() {
+void loadFile(int* numArray) {
   std::stringstream ss;
   std::string numString;
 
   std::ifstream inputFileCheck("data.txt");
   std::ifstream inputFile("data.txt");
-  int lineNum;
+  int lineNum = 0;
 
   if (inputFile.is_open()) {
     while (std::getline(inputFileCheck, numString, ',')) {
@@ -49,6 +48,7 @@ void loadFile() {
 }
 
 int main() {
+int numArray[51];
 bool mainLoop = true;
 bool sortLoop = true;
 std::string menuInput;
@@ -60,7 +60,7 @@ std::string sortInput;
     std::cin >> menuInput;
 
     if(menuInput == "1") {
-      loadFile();
+      loadFile(numArray);
 
       std::cout << "\nNumber array loaded from file\n" << std::endl;
 
@@ -78,8 +78,8 @@ std::string sortInput;
           std::cout << "\nInsertion Sort: " << std::flush;
           InsertionSort * insert = new InsertionSort();
 
-          int* insertSortedArray = insert->sortArray(numArray, 50);
-          printArray(insertSortedArray);
+          insert->sortArray(numArray, 50);
+          printArray(numArray);
 
           sortLoop = false;
 
@@ -87,8 +87,9 @@ std::string sortInput;
           std::cout << "\nBubble Sort: " << std::flush;
           BubbleSort * bubble = new BubbleSort();
 
-          int* bubbleSortedArray = bubble->sortArray(numArray, 50);
-          printArray(bubbleSortedArray);
+          bubble->sortArray(numArray, 50);
+          printArray(numArray);
+
           // End sorting loop and return to the loading option
           sortLoop = false;
         } else if (sortInput == "3") {

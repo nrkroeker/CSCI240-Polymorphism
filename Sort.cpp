@@ -8,6 +8,6 @@ Sort::~Sort() {
 
 }
 
-int* sortArray(int numArray[], int arrayLength) {
+void sortArray(int* numArray, int arrayLength) {
 
 }

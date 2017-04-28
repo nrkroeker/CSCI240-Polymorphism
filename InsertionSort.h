@@ -11,7 +11,7 @@ class InsertionSort : public Sort {
     InsertionSort();
     ~InsertionSort();
 
-    virtual int* sortArray(int numArray[], int arrayLength);
+    virtual void sortArray(int* numArray, int arrayLength);
 
 };
 #endif

@@ -12,7 +12,7 @@ BubbleSort::~BubbleSort() {
 
 }
 
-int* BubbleSort::sortArray(int numArray[], int arrayLength) {
+void BubbleSort::sortArray(int* numArray, int arrayLength) {
   for (int i = 0; i < 5; i++) {
 
     for (int a = 0; a < 5 - i - 1; a++) {
@@ -24,5 +24,4 @@ int* BubbleSort::sortArray(int numArray[], int arrayLength) {
       }
     }
   }
-  return numArray;
 }

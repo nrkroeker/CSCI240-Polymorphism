@@ -9,7 +9,7 @@ class Sort {
     Sort();
     ~Sort();
 
-    virtual int* sortArray(int numArray[], int arrayLength) = 0;
+    virtual void sortArray(int* numArray, int arrayLength) = 0;
 
 };
 #endif

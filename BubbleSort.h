@@ -11,7 +11,7 @@ class BubbleSort : public Sort {
     BubbleSort();
     ~BubbleSort();
 
-    virtual int* sortArray(int numArray[], int arrayLength);
+    virtual void sortArray(int* numArray, int arrayLength);
 
 };
 #endif
