@@ -5,12 +5,10 @@
 class Sort {
 
   public:
-    // Constructor
-    Sort() = default;
-    // Destructor
-    virtual ~Sort() {};
 
-    // Methods
+    Sort();
+    ~Sort();
+
     virtual int* sortArray(int numArray[], int arrayLength) = 0;
 
 };

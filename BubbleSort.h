@@ -7,6 +7,7 @@
 class BubbleSort : public Sort {
 
   public:
+
     BubbleSort();
     ~BubbleSort();
 

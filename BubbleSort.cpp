@@ -13,17 +13,14 @@ BubbleSort::~BubbleSort() {
 }
 
 int* BubbleSort::sortArray(int numArray[], int arrayLength) {
-  std::cout << "Insertion Sort: " << std::flush;
-
-  // Loop through all integers in the array
   for (int i = 0; i < 5; i++) {
 
     for (int a = 0; a < 5 - i - 1; a++) {
       if (numArray[a] > numArray[a + 1]) {
 
-        int swap = numArray[a];
+        int a = numArray[a];
         numArray[a] = numArray[a + 1];
-        numArray[a + 1] = swap;
+        numArray[a + 1] = a;
       }
     }
   }

@@ -12,20 +12,17 @@ InsertionSort::~InsertionSort() {
 
 }
 
-int* InsertionSort::sortArray(int numArray[], int arrayLength) {
+int* InsertionSort::sortArray(int array[], int arrayLength) {
   int a, b;
   for (int i = 0; i < arrayLength; i++) {
     b = i;
-    while (b > 0 && numArray[b] < numArray[b - 1]) {
-      a = numArray[b];
-      numArray[b] = numArray[b - 1];
-      numArray[b - 1] = a;
+    while (b > 0 && array[b] < array[b - 1]) {
+      a = array[b];
+      array[b] = array[b - 1];
+      array[b - 1] = a;
 
       b--;
     }
   }
-
-  for (int i = 0; i < arrayLength; i++) {
-    std::cout << numArray[i] << std::endl;
-  }
+  return array;
 }
