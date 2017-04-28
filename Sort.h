@@ -6,9 +6,11 @@ class Sort {
 
   public:
 
+    // Constructor and deconstructor
     Sort();
     ~Sort();
 
+    // Purely virtual function
     virtual void sortArray(int* numArray, int arrayLength) = 0;
 
 };

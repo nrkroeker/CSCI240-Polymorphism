@@ -8,9 +8,11 @@ class InsertionSort : public Sort {
 
   public:
 
+    // Constructor and deconstructor
     InsertionSort();
     ~InsertionSort();
 
+    // Overriding virtual method
     virtual void sortArray(int* numArray, int arrayLength);
 
 };

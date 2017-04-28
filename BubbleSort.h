@@ -8,9 +8,11 @@ class BubbleSort : public Sort {
 
   public:
 
+    // Constructor and deconstructor
     BubbleSort();
     ~BubbleSort();
 
+    // Overriding virtual method
     virtual void sortArray(int* numArray, int arrayLength);
 
 };
