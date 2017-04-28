@@ -18,9 +18,9 @@ void BubbleSort::sortArray(int* numArray, int arrayLength) {
     for (int a = 0; a < 50 - i - 1; a++) {
       if (numArray[a] > numArray[a + 1]) {
 
-        int a = numArray[a];
+        int temp = numArray[a];
         numArray[a] = numArray[a + 1];
-        numArray[a + 1] = a;
+        numArray[a + 1] = temp;
       }
     }
   }

@@ -78,9 +78,10 @@ std::string sortInput;
           std::cout << "\nInsertion Sort: " << std::flush;
           InsertionSort * insert = new InsertionSort();
 
-          insert->sortArray(numArray, 51);
+          insert->sortArray(numArray, 50);
           printArray(numArray);
-
+          delete insert;
+          
           sortLoop = false;
 
         } else if (sortInput == "2") {
@@ -89,7 +90,7 @@ std::string sortInput;
 
           bubble->sortArray(numArray, 50);
           printArray(numArray);
-
+          delete bubble;
           // End sorting loop and return to the loading option
           sortLoop = false;
         } else if (sortInput == "3") {
